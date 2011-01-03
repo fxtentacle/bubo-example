@@ -1,4 +1,16 @@
 class ImagesController < ApplicationController
+  def self.add_filelist(path)
+    b = ApplicationController.new.make_bubo
+    f = File.new(path) 
+    f.read.split("\n").each do |line|
+      parts = line.split("\t")
+      img = Image.new(:url => parts[1])
+      img.save!
+      b.add_image(img.id.to_s, img.url)
+    end
+    b.images_status
+  end
+  
   # GET /images
   # GET /images.xml
   def index
