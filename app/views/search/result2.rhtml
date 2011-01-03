@@ -1,5 +1,5 @@
 <h1>returned the following results:</h1>
-Query URL: <%= @query_img_url %><br/>
+<div class="query_url">Query URL: <%= @query_img_url %><br/></div>
 
 <% @retrieval.each do |line| %>
 	<% if line.starts_with? '#' %>
