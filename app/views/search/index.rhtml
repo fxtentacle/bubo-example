@@ -1,0 +1,6 @@
+<h1>Please upload your query image</h1>
+<% form_tag ({:action => 'result'}, :multipart => true) do |f| %>
+<p><label for="upload">Select File</label> : 
+<%= file_field_tag 'upload' %></p>
+<%= submit_tag "Upload" %>
+<% end %>

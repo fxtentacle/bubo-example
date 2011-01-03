@@ -1,0 +1,8 @@
+<h1>Your search for</h1>
+<%= image_tag  '/search/query?rnd='+@rnd %>
+<%= @query_file.to_yaml %>
+<div id="fillme">
+Waiting for result ...
+</div>
+<%= javascript_include_tag 'prototype' %>
+<%= javascript_tag "window.setTimeout(function(){ new Ajax.Updater('fillme','/search/result2') }, 500);" %>
