@@ -9,7 +9,7 @@ class SearchController < ApplicationController
   end
   
   def result2
-    @query_img_url = url_for :controller => 'search', :action => 'query'
+    @query_img_url = (url_for :controller => 'search', :action => 'query') + '?rnd='+params[:rnd]
     @retrieval = make_bubo.retrieve(@query_img_url)
   end
   

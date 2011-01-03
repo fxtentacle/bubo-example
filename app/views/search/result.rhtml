@@ -5,4 +5,4 @@
 Waiting for result ...
 </div>
 <%= javascript_include_tag 'prototype' %>
-<%= javascript_tag "window.setTimeout(function(){ new Ajax.Updater('fillme','/search/result2') }, 500);" %>
+<%= javascript_tag "window.setTimeout(function(){ new Ajax.Updater('fillme','/search/result2?rnd=#{@rnd}') }, 500);" %>
