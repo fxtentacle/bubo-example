@@ -1,4 +1,8 @@
-Url: <%= @query_img_url %>
+<h1>returned the following results:</h1>
+Query URL: <%= @query_img_url %><br/>
+
 <% @retrieval.each do |line| %>
-	<%= line %>
+	<% parts = line.split('\t') %>
+	<h2>Score <em>parts[1]</em> - <%= parts[0] %></h2>
+	<%= image_tag(parts[0]) %><br/>
 <% end %>
