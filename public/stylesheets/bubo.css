@@ -1,0 +1,58 @@
+BODY
+{
+	font-family: sans-serif;
+	background-color: #000;
+}
+DIV#search_form
+{
+	width: 500px;
+	height: auto;
+	background-color: #FFF;
+	border: 3px solid #CCC;
+	padding: 30px;
+	/*+placement:margin-auto 0px 20px;*/
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	left: 0px;
+	top: 20px;
+}
+DIV#search_results
+{
+	text-align: center;
+}
+DIV#search_results H1
+{
+	color: #888;
+	text-align: center;
+	font-size: 16px;
+}
+DIV#search_results .result
+{
+	width: 250px;
+	/*+placement:margin-auto 0px 0px;*/
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	left: 0px;
+	top: 0px;
+	color: #888;
+	font-size: 6px;
+	text-align: left;
+	padding: 10px;
+}
+#search_results .result H2
+{
+	color: #CCC;
+	text-align: center;
+	font-size: 16px;
+}
+DIV#search_results .query_url
+{
+	color: #888;
+	font-size: 12px;
+}
+#search_results .result PRE
+{
+	font-size: 12px;
+}
