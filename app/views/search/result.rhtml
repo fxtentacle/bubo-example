@@ -9,4 +9,5 @@ Waiting for result ...
 <%= javascript_include_tag 'prototype' %>
 <%= javascript_tag "window.setTimeout(function(){ new Ajax.Updater('fillme','/search/result2?rnd=#{@rnd}') }, 500);" %>
 
+<%= link_to 'Try again', :action => 'index' %>
 </div>
