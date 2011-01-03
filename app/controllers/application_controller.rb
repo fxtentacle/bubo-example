@@ -7,4 +7,8 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
+  
+  def make_bubo
+    Bubo.new('bubo-example@spratpix.com',ENV['api_key'])
+  end
 end
