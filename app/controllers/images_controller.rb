@@ -11,6 +11,11 @@ class ImagesController < ApplicationController
     b.images_status
   end
   
+  def self.crawler_status
+    ApplicationController.new.make_bubo.images_status
+  end
+  
+  
   # GET /images
   # GET /images.xml
   def index
