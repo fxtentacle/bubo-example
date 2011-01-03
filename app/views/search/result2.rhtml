@@ -2,7 +2,15 @@
 Query URL: <%= @query_img_url %><br/>
 
 <% @retrieval.each do |line| %>
-	<% parts = line.split('\t') %>
-	<h2>Score <em>parts[1]</em> - <%= parts[0] %></h2>
-	<%= image_tag(parts[0]) %><br/>
+	<% if line.starts_with? '#' %>
+		<pre><%= line %></pre>
+	<% else %>
+		<% parts = line.split("\t") %>
+		<div class="result">
+			<h2><%= (parts[1].to_f * 100).to_s %>%</h2>
+			<%= image_tag(preview_url(parts[0])) %><br/>
+			Matrix: <%= parts[2] %><br/>
+			Url: <%= parts[0] %>
+		<div>
+	<% end %>
 <% end %>
