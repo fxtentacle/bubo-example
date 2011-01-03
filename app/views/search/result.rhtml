@@ -1,3 +1,6 @@
+<%= stylesheet_link_tag :all %>
+<div id="search_results">
+
 <h1>Your search for</h1>
 <%= image_tag  '/search/query?rnd='+@rnd, :width=>300 %>
 <div id="fillme">
@@ -5,3 +8,5 @@ Waiting for result ...
 </div>
 <%= javascript_include_tag 'prototype' %>
 <%= javascript_tag "window.setTimeout(function(){ new Ajax.Updater('fillme','/search/result2?rnd=#{@rnd}') }, 500);" %>
+
+</div>

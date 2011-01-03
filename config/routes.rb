@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :images
+  # map.resources :images
   map.root :controller => "search"
   map.connect '/search/result', :controller => "search", :action => "result"
   map.connect '/search/result2', :controller => "search", :action => "result2"
