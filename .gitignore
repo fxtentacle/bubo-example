@@ -1,1 +1,6 @@
+tmp/querydb/development.sqlite3
+log/development.log
 tmp/query
+db/development.sqlite3
+log/development.log
+
