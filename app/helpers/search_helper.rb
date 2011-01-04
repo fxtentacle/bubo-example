@@ -6,4 +6,13 @@ module SearchHelper
     end
     url
   end
+  
+  def link_url(url)
+    url = Image.find(url.to_i).url
+    if url =~ /.*?@spratpix-fs\/(.*?)\/full\/(.*)/
+      url = 'https://'+$1+'.spratshop.com/search.html?q='+$2
+    end
+    url
+  end
+  
 end
