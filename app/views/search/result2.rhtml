@@ -8,7 +8,9 @@
 		<% parts = line.split("\t") %>
 		<div class="result">
 			<h2><%= (parts[1].to_f * 100).to_s %>%</h2>
-			<%= image_tag(preview_url(parts[0])) %><br/>
+			<a href="<%= link_url(parts[0]) %>" target="_blank">
+			<%= image_tag(preview_url(parts[0])) %>
+			</a><br/>
 			Matrix: <%= parts[2] %><br/>
 			Url: <%= parts[0] %>
 		<div>

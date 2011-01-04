@@ -2,12 +2,12 @@
 <div id="search_results">
 
 <h1>Your search for</h1>
-<%= image_tag  '/search/query?rnd='+@rnd, :width=>300 %>
+<%= image_tag @query_img_url, :width=>300 %>
 <div id="fillme">
 Waiting for result ...
 </div>
 <%= javascript_include_tag 'prototype' %>
-<%= javascript_tag "window.setTimeout(function(){ new Ajax.Updater('fillme','/search/result2?rnd=#{@rnd}') }, 500);" %>
+<%= javascript_tag "window.setTimeout(function(){ new Ajax.Updater('fillme','#{@result2_url}') }, 500);" %>
 
 <%= link_to 'Try again', :action => 'index' %>
 </div>
