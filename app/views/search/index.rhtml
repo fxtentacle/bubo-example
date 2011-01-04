@@ -1,11 +1,24 @@
 <%= stylesheet_link_tag 'bubo' %>
 <div id="search_form">
 
-<h1>Please upload your query image</h1>
-<% form_tag ({:action => 'result'}, :multipart => true) do |f| %>
-<p><label for="upload">Select File</label> : 
-<%= file_field_tag 'upload' %></p>
-<%= submit_tag "Upload" %>
-<% end %>
+	<h1>Please upload your query image</h1>
+	<% form_tag ({:action => 'result'}, :multipart => true) do |f| %>
+	<p><label for="upload">Select File</label> : 
+	<%= file_field_tag 'upload' %></p>
+	<%= submit_tag "Upload" %>
+	<% end %>
+
+	<br/><h1>or enter an URL</h1>
+	<% form_tag ({:action => 'result'}, :multipart => true) do |f| %>
+	<p><label for="url">Enter Url</label> : 
+	<%= text_field_tag 'url' %>
+	<%= submit_tag "Search" %>
+	</p>
+	<% end %>
+
+	<br/><h1>Neat examples</h1>
+	<%= link_to 'Collage', :controller => 'search', :action=>'result', :url=>'http://spratpix.com/example1.jpg' %>
+	<%= link_to 'extreme Crop', :controller => 'search', :action=>'result', :url=>'http://spratpix.com/example3.jpg' %>
+	<%= link_to 'Cut-out', :controller => 'search', :action=>'result', :url=>'http://spratpix.com/example5.jpg' %>
 
 </div>
