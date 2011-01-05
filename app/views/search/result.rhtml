@@ -8,8 +8,7 @@
 Waiting for result ...
 <br/><br/><br/><br/><br/><br/><br/><br/>
 </div>
-<%= javascript_include_tag 'prototype' %>
-<%= javascript_tag "window.setTimeout(function(){ new Ajax.Updater('fillme','#{@result2_url}') }, 500);" %>
-
 <%= link_to 'back to search form', :action => 'index' %>
 </div>
+<%= javascript_include_tag 'prototype' %>
+<%= javascript_tag "window.setTimeout(function(){ new Ajax.Updater('fillme','#{@result2_url}') }, 500);" %>
