@@ -4,7 +4,9 @@
 <h1>Your search for</h1>
 <%= image_tag @query_img_url, :width=>300 %>
 <div id="fillme">
+<br/><br/><br/><br/>
 Waiting for result ...
+<br/><br/><br/><br/>
 </div>
 <%= javascript_include_tag 'prototype' %>
 <%= javascript_tag "window.setTimeout(function(){ new Ajax.Updater('fillme','#{@result2_url}') }, 500);" %>
