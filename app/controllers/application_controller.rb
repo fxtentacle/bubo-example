@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
   # filter_parameter_logging :password
   
   def make_bubo
+    # you could replace this with Bubo.from_heroku if you're deploying on heroku with our add-on
     Bubo.new('bubo-example@spratpix.com',ENV['api_key'])
   end
 end
