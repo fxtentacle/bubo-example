@@ -4,6 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect '/search/result', :controller => "search", :action => "result"
   map.connect '/search/result2', :controller => "search", :action => "result2"
   map.query_img '/search/query', :controller => "search", :action => "query"
+  # map.resources :images
 
   # The priority is based upon order of creation: first created -> highest priority.
 
