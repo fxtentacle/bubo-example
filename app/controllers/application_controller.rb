@@ -7,9 +7,4 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
-  
-  def make_bubo
-    # you could replace this with Bubo.from_heroku if you're deploying on heroku with our add-on
-    Bubo.new('bubo-example@spratpix.com',ENV['api_key'])
-  end
 end
