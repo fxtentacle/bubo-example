@@ -17,7 +17,7 @@ class SearchController < ApplicationController
   
   def result2
     @query_img_url = params[:q]
-    @retrieval = make_bubo.retrieve(@query_img_url)
+    @retrieval = Bubo.from_heroku.retrieve(@query_img_url)
   end
   
   def query
